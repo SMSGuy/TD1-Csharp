@@ -14,17 +14,16 @@ namespace TD1
             Int32 montant;
             Console.WriteLine("Saisir le montant à décomposer");
             montant = Int32.Parse(Console.ReadLine());
-            Console.WriteLine(montant / 100);
-            montant = montant / 100;
-            Console.Writeline(montant);
-            montant = montant / 50;
-            Console.Writeline(montant);
-            montant = montant / 20;
-            Console.Writeline(montant);
-            montant = montant / 10;
-            Console.Writeline(montant);
-            montant = montant / 5;
-            Console.Writeline(montant);
+            Console.WriteLine("Billets 100 : "+ (montant/100).ToString());
+            montant = montant % 100;
+            Console.WriteLine("Billets 50 : "+ (montant/50).ToString());
+            montant = montant % 50;
+            Console.WriteLine("Billets 20 : "+ (montant/20).ToString());
+            montant = montant % 20;
+            Console.WriteLine("Billets 10 : "+ (montant/10).ToString());
+            montant = montant % 10;
+            Console.WriteLine("Pièces 1 : "+ montant.ToString());
+
             Console.ReadKey();
 
         }
